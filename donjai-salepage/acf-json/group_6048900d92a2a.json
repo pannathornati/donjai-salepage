@@ -1,0 +1,798 @@
+{
+    "key": "group_6048900d92a2a",
+    "title": "Sales Page",
+    "fields": [
+        {
+            "key": "field_6049ba5a2b14a",
+            "label": "Products",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_610cf0cf1aaed",
+            "label": "Title Text",
+            "name": "title_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6049bc089e221",
+            "label": "Mobile Layout",
+            "name": "layout_m",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "list": "List",
+                "card": "Card"
+            },
+            "allow_null": 0,
+            "default_value": "list",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6049bc8213071",
+            "label": "Mobile Columns",
+            "name": "columns_m",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049bc089e221",
+                        "operator": "==",
+                        "value": "card"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 1,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 3,
+            "step": 1
+        },
+        {
+            "key": "field_607696cdcef38",
+            "label": "Mobile Image Width",
+            "name": "img_width_m",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049bc089e221",
+                        "operator": "==",
+                        "value": "list"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 40,
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": 10,
+            "max": 90,
+            "step": 1
+        },
+        {
+            "key": "field_607beb4a0c27b",
+            "label": "Desktop Layout",
+            "name": "layout_d",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "list": "List",
+                "card": "Card"
+            },
+            "allow_null": 0,
+            "default_value": "card",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6049e6d92e64c",
+            "label": "Desktop Columns",
+            "name": "columns_d",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_607beb4a0c27b",
+                        "operator": "==",
+                        "value": "card"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 3,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 6,
+            "step": 1
+        },
+        {
+            "key": "field_60769703cef39",
+            "label": "Desktop Image Width",
+            "name": "img_width_d",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_607beb4a0c27b",
+                        "operator": "==",
+                        "value": "list"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 40,
+            "placeholder": "",
+            "prepend": "",
+            "append": "%",
+            "min": 10,
+            "max": 90,
+            "step": 1
+        },
+        {
+            "key": "field_604890153b2ab",
+            "label": "Products",
+            "name": "products",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_6048905e3b2ad",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Product",
+            "sub_fields": [
+                {
+                    "key": "field_6048905e3b2ad",
+                    "label": "Image",
+                    "name": "image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_604890383b2ac",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_604891473b2af",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_60765f868176a",
+                    "label": "Full Price",
+                    "name": "full_price",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_6048906f3b2ae",
+                    "label": "Sale Price",
+                    "name": "sale_price",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_604892743b2b0",
+                    "label": "Shipping",
+                    "name": "shipping",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_6108cf3613c0b",
+                    "label": "In Stock",
+                    "name": "stock",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_610a3f4a07c03",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": 0,
+                    "max": "",
+                    "step": 1
+                },
+                {
+                    "key": "field_607bc6c478152",
+                    "label": "Selected?",
+                    "name": "selected",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "Auto Selected",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
+        },
+        {
+            "key": "field_610bbf50dd23d",
+            "label": "Select One Product",
+            "name": "select_one",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "-border",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_610bbf0cdd23c",
+            "label": "Hide Product Amount",
+            "name": "hide_amount",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "-border",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Hide",
+            "ui_off_text": "Show"
+        },
+        {
+            "key": "field_6072f38cda5a4",
+            "label": "Currency",
+            "name": "currency",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "-border",
+                "id": ""
+            },
+            "default_value": " บาท",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6072f66696a44",
+            "label": "Currency Position",
+            "name": "currency_position",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "-border",
+                "id": ""
+            },
+            "choices": {
+                "left": "Left",
+                "right": "Right"
+            },
+            "allow_null": 0,
+            "default_value": "right",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_610a3f4a07c03",
+            "label": "Limit Purchase",
+            "name": "limit_purchase",
+            "type": "true_false",
+            "instructions": "Set limit items from In Stock.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Limit",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_610a417bea0e7",
+            "label": "Sold Out Text",
+            "name": "sold_out_text",
+            "type": "text",
+            "instructions": "Display if In Stock is 0.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610a3f4a07c03",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "ขายหมดแล้ว!",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_610a42651695e",
+            "label": "Show Stock?",
+            "name": "show_stock",
+            "type": "true_false",
+            "instructions": "Show under product description",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610a3f4a07c03",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_610a42241695d",
+            "label": "In Stock Text",
+            "name": "instock_text",
+            "type": "text",
+            "instructions": "Use [instock] for stock amount.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_610a42651695e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "มีสินค้า [instock] ชิ้น",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_6049e353d0e1e",
+            "label": "Shipping",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6049e502c44a4",
+            "label": "Options",
+            "name": "shipping_options",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "none": "None",
+                "free": "Free",
+                "flat": "Flat Rate",
+                "flat_free": "Flat + Free Shipping",
+                "cal": "Calculation"
+            },
+            "allow_null": 0,
+            "default_value": "free",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6049e752d0d6c",
+            "label": "Flat Cost",
+            "name": "flat_cost",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049e502c44a4",
+                        "operator": "==",
+                        "value": "flat"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 40,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6049e83bcc703",
+            "label": "Flat Cost",
+            "name": "flat_free_cost",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049e502c44a4",
+                        "operator": "==",
+                        "value": "flat_free"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6049eb0dd11cf",
+                        "operator": "==",
+                        "value": "start"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 40,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6049e858cc704",
+            "label": "Minimum for Free Shipping",
+            "name": "flat_free_min",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049e502c44a4",
+                        "operator": "==",
+                        "value": "flat_free"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6049eb0dd11cf",
+                        "operator": "==",
+                        "value": "free"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 400,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_610a56a89cb53",
+            "label": "COD Cost",
+            "name": "cod_cost",
+            "type": "number",
+            "instructions": "Cash on Delivery Cost (คิดเพิ่มหากเลือกเก็บเงินปลายทาง)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049eb0dd11cf",
+                        "operator": "==",
+                        "value": "cod"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": ""
+        },
+        {
+            "key": "field_6049eb0dd11cf",
+            "label": "Calculation Steps",
+            "name": "steps",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6049e502c44a4",
+                        "operator": "==",
+                        "value": "cal"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "start": "Starting Flat Cost",
+                "products": "Add Products Shipping Cost",
+                "cod": "Add Cash on Delivery (COD) Cost",
+                "free": "Free Shipping if Buy More"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-templates\/salepage.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1656997165
+}
