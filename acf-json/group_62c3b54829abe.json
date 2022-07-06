@@ -1,0 +1,543 @@
+{
+    "key": "group_62c3b54829abe",
+    "title": "Payment - การชำระเงิน",
+    "fields": [
+        {
+            "key": "field_62c3b647b4f87",
+            "label": "Use Forminator?",
+            "name": "use_forminator",
+            "type": "true_false",
+            "instructions": "If yes, please install <a href=\"https:\/\/wordpress.org\/plugins\/forminator\/\" target=\"_blank\"><b>Forminator<\/b><\/a> plugin.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Forminator",
+            "ui_off_text": "Other Plugin"
+        },
+        {
+            "key": "field_62c3b6b4b4f88",
+            "label": "Forminator",
+            "name": "form",
+            "type": "post_object",
+            "instructions": "Please read <a href=\"https:\/\/docs.donjaiwebs.com\/article\/64-sale-page-payment-form\" target=\"_blank\"><b>Sale Page Payment Form<\/b><\/a>.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b647b4f87",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "forminator_forms"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_62c3b6ebb4f89",
+            "label": "Other Plugin Shortcode",
+            "name": "other_plugin_shortcode",
+            "type": "text",
+            "instructions": "Please read <a href=\"https:\/\/docs.donjaiwebs.com\/article\/64-sale-page-payment-form\" target=\"_blank\"><b>Sale Page Payment Form<\/b><\/a>.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b647b4f87",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62c3b6fab4f8a",
+            "label": "Show Summary?",
+            "name": "show_summary",
+            "type": "true_false",
+            "instructions": "Order Summary Table.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_62c3b715b4f8b",
+            "label": "Show Bank?",
+            "name": "show_bank",
+            "type": "true_false",
+            "instructions": "Bank Account for Wire Transfer",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "Show",
+            "ui_off_text": "Hide"
+        },
+        {
+            "key": "field_62c3b74bb4f8c",
+            "label": "Summary Table Text",
+            "name": "table",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b6fab4f8a",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_62c3b758b4f8d",
+                    "label": "Product",
+                    "name": "product",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "16.666",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "สินค้า",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62c3b76ab4f8e",
+                    "label": "Amount",
+                    "name": "amount",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "16.666",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "จำนวน",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62c3b776b4f8f",
+                    "label": "Total",
+                    "name": "total",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "16.666",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "รวม",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62c3b78db4f90",
+                    "label": "Shipping",
+                    "name": "shipping",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "16.666",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "ค่าส่ง",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62c3b799b4f91",
+                    "label": "Free Shipping",
+                    "name": "free_shipping",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "16.666",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Free!",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62c3b7a4b4f92",
+                    "label": "Total",
+                    "name": "total",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "16.666",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "รวม",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62c3b7c8b4f93",
+            "label": "Bank Account",
+            "name": "bank",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b715b4f8b",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_62c3b7e8b4f94",
+                    "label": "Logo",
+                    "name": "bank_logo",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "baac": "BAAC ธ.ก.ส.",
+                        "bbl": "BBL ธนาคารกรุงเทพ",
+                        "citi": "CITI ซิตี้แบงก์",
+                        "ghb": "GHB ธนาคารอาคารสงเคราะห์",
+                        "gsb": "GSB ธนาคารออมสิน",
+                        "ibank": "IBANK ธนาคารอิสลาม",
+                        "icbc": "ICBC ธนาคารไอซีบีซี",
+                        "kbank": "KBANK ธนาคารกสิกรไทย",
+                        "kkp": "KKP ธนาคารเกียรตินาคิน",
+                        "krungsri": "KRUNGSRI ธนาคารกรุงศรีฯ",
+                        "ktb": "KTB ธนาคารกรุงไทย",
+                        "scb": "SCB ธนาคารไทยพาณิชย์",
+                        "tbank": "TBANK ธนาคารธนชาต",
+                        "tisco": "TISCO ธนาคารทิสโก้",
+                        "tmb": "TMB ธนาคารทหารไทย",
+                        "uob": "UOB ธนาคารยูโอบี",
+                        "promptpay": "PROMPTPAY พร้อมเพย์",
+                        "other": "Other"
+                    },
+                    "default_value": false,
+                    "allow_null": 1,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_62c3b7fab4f95",
+                    "label": "Custom Logo",
+                    "name": "custom_logo",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_62c3b7e8b4f94",
+                                "operator": "==",
+                                "value": "other"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_62c3b81cb4f96",
+                    "label": "Bank Name",
+                    "name": "bank_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_62c3b824b4f97",
+                    "label": "Account No.",
+                    "name": "account_no",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_62c3b836b4f98",
+                    "label": "Account Name",
+                    "name": "account_name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_62c3b879b4f99",
+            "label": "Enable Line Notify?",
+            "name": "enable_line_notify",
+            "type": "true_false",
+            "instructions": "Please read <a href=\"https:\/\/docs.donjaiwebs.com\/article\/85-line-notify-setting-for-sales-page\" target=\"_blank\"><b>Line Notify Setting for Sales Page<\/b><\/a>.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b647b4f87",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Enable",
+            "ui_off_text": "Disable"
+        },
+        {
+            "key": "field_62c3b8a5b4f9a",
+            "label": "Line Notify token",
+            "name": "line_notify_token",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b879b4f99",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62c3b8c2b4f9b",
+            "label": "Fields",
+            "name": "fields",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b879b4f99",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "textarea-1, radio-1, name-1, email-1, number-2, upload-1, textarea-2",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_62c3b8e5b4f9c",
+            "label": "Labels",
+            "name": "labels",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_62c3b879b4f99",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "คำสั่งซื้อ, ช่องทางการชำระเงิน, ชื่อ, อีเมล, เบอร์โทร, สลิป, ที่อยู่",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "payment-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1657019217
+}
