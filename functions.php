@@ -355,7 +355,7 @@ function donjai_update_themes( $transient ) {
 
 	// connect to a remote server where the update information is stored
 	$remote = wp_remote_get(
-		'http://localhost/api/info.json',
+		'https://raw.githubusercontent.com/pannathornati/donjai-salepage/main/info.json',
 		array(
 			'timeout' => 10,
 			'headers' => array(
